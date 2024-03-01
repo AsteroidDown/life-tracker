@@ -124,7 +124,7 @@ class _PlayerLifeComponentState extends State<PlayerLifeComponent> {
             opacity: trackerState.monarch != -1 ? 1 : 0,
             child: Container(
               alignment: Alignment.topCenter,
-              padding: EdgeInsets.only(right: 10),
+              padding: EdgeInsets.only(right: 8),
               child: IconButton(
                 icon: Icon(
                   size: 32,
