@@ -6,10 +6,28 @@ import '../components/layouts/layouts.dart';
 import '../models/template.model.dart';
 import '../states/tracker.state.dart';
 
-class TrackerPage extends StatelessWidget {
-  const TrackerPage({Key? key, required this.template}) : super(key: key);
+class TrackerPage extends StatefulWidget {
+  const TrackerPage({Key? key, this.template}) : super(key: key);
 
-  final Template template;
+  final Template? template;
+
+  @override
+  State<TrackerPage> createState() => _TrackerPageState();
+}
+
+class _TrackerPageState extends State<TrackerPage> {
+  @override
+  void initState() {
+    if (widget.template == null) {
+      template = Template(4, 40, true);
+    } else {
+      template = widget.template!;
+    }
+
+    super.initState();
+  }
+
+  late Template template;
 
   @override
   Widget build(BuildContext context) {

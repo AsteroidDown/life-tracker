@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:test_app/pages/template.page.dart';
+import 'package:test_app/pages/tracker.page.dart';
 import 'pages/home.page.dart';
 
 void main() {
@@ -35,11 +36,17 @@ class MyApp extends StatelessWidget {
       scrollBehavior: AppScrollBehavior(),
       color: Color.fromARGB(255, 30, 30, 30),
       theme: ThemeData(
-          textTheme: TextTheme(bodySmall: TextStyle(color: Colors.white))),
-      routes: {
-        '/': (context) => HomePage(),
-        '/template': (context) => TemplatePage(),
-      },
+        textTheme: TextTheme(
+          bodySmall: TextStyle(color: Colors.white),
+        ),
+      ),
+      home: HomePage(),
+
+      // routes: {
+      //   '/': (context) => HomePage(),
+      //   '/template': (context) => TemplatePage(),
+      //   '/template/track': (context) => TrackerPage(),
+      // },
     );
   }
 }

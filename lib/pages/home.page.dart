@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:test_app/components/shared/button.component.dart';
 import 'package:test_app/models/template.model.dart';
+import 'package:test_app/pages/template.page.dart';
 
 import '../models/game-data.model.dart';
 import 'tracker.page.dart';
@@ -82,7 +83,13 @@ class _HomePageState extends State<HomePage> {
             ButtonComponent(
               shouldAnimate: false,
               onPressed: () {
-                Navigator.pushNamed(context, '/template');
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => TemplatePage(),
+                  ),
+                );
+                // Navigator.pushNamed(context, '/template');
               },
               child: Container(
                 padding: EdgeInsets.fromLTRB(16, 8, 16, 8),

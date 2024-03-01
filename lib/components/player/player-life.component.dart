@@ -124,10 +124,10 @@ class _PlayerLifeComponentState extends State<PlayerLifeComponent> {
             opacity: trackerState.monarch != -1 ? 1 : 0,
             child: Container(
               alignment: Alignment.topCenter,
-              padding: EdgeInsets.only(right: 8),
+              padding: EdgeInsets.only(right: 10),
               child: IconButton(
                 icon: Icon(
-                  size: 32,
+                  size: 40,
                   color: trackerState.monarch == player.number
                       ? Colors.grey.shade900
                       : Colors.grey.shade300.withAlpha(144),
