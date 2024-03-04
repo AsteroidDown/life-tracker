@@ -23,39 +23,37 @@ class DicePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Expanded(
-        child: Stack(
-          children: [
-            for (int index = 0; index < dice.length; index++)
-              RadialComponent(
-                angle: ((2 * pi) / dice.length) * index,
-                radius: radius,
-                child: SizedBox(
-                  width: buttonSize,
-                  height: buttonSize,
-                  child: ButtonComponent(
-                    onPressed: () => {rollDice(dice[index])},
-                    child: Center(
-                      child: Transform.rotate(
-                        angle: (pi * 0.5) + (2 * (pi / 6) * index),
-                        child: Image(
-                          image: AssetImage('assets/d${dice[index]}.png'),
-                        ),
+      child: Stack(
+        children: [
+          for (int index = 0; index < dice.length; index++)
+            RadialComponent(
+              angle: ((2 * pi) / dice.length) * index,
+              radius: radius,
+              child: SizedBox(
+                width: buttonSize,
+                height: buttonSize,
+                child: ButtonComponent(
+                  onPressed: () => {rollDice(dice[index])},
+                  child: Center(
+                    child: Transform.rotate(
+                      angle: (pi * 0.5) + (2 * (pi / 6) * index),
+                      child: Image(
+                        image: AssetImage('assets/d${dice[index]}.png'),
                       ),
                     ),
                   ),
                 ),
               ),
-            Center(
-              child: IconButton(
-                iconSize: 36,
-                onPressed: goBack,
-                color: Colors.grey.shade200,
-                icon: Icon(Icons.home_rounded),
-              ),
             ),
-          ],
-        ),
+          Center(
+            child: IconButton(
+              iconSize: 36,
+              onPressed: goBack,
+              color: Colors.grey.shade200,
+              icon: Icon(Icons.home_rounded),
+            ),
+          ),
+        ],
       ),
     );
   }

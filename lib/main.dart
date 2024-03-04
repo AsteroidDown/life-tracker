@@ -2,8 +2,6 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:test_app/pages/template.page.dart';
-import 'package:test_app/pages/tracker.page.dart';
 import 'pages/home.page.dart';
 
 void main() {
@@ -41,12 +39,6 @@ class MyApp extends StatelessWidget {
         ),
       ),
       home: HomePage(),
-
-      // routes: {
-      //   '/': (context) => HomePage(),
-      //   '/template': (context) => TemplatePage(),
-      //   '/template/track': (context) => TrackerPage(),
-      // },
     );
   }
 }

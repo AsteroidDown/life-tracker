@@ -20,51 +20,49 @@ class RollResultPage extends StatelessWidget {
       decoration: TextDecoration.none,
     );
 
-    return Expanded(
-      child: Stack(
-        children: [
-          Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  '$rollResult',
-                  style: style,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    IconButton(
-                      iconSize: 36,
-                      color: Colors.grey.shade200,
-                      icon: Icon(Icons.arrow_back_rounded),
-                      onPressed: () => {
-                        pageController.previousPage(
-                          duration: duration,
-                          curve: Curves.easeOut,
-                        ),
-                      },
-                    ),
-                    SizedBox(width: 16),
-                    IconButton(
-                      iconSize: 36,
-                      color: Colors.grey.shade200,
-                      icon: Icon(Icons.home_rounded),
-                      onPressed: () => {
-                        pageController.animateToPage(
-                          1,
-                          duration: duration,
-                          curve: Curves.easeInOut,
-                        ),
-                      },
-                    ),
-                  ],
-                ),
-              ],
-            ),
+    return Stack(
+      children: [
+        Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                '$rollResult',
+                style: style,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  IconButton(
+                    iconSize: 36,
+                    color: Colors.grey.shade200,
+                    icon: Icon(Icons.arrow_back_rounded),
+                    onPressed: () => {
+                      pageController.previousPage(
+                        duration: duration,
+                        curve: Curves.easeOut,
+                      ),
+                    },
+                  ),
+                  SizedBox(width: 16),
+                  IconButton(
+                    iconSize: 36,
+                    color: Colors.grey.shade200,
+                    icon: Icon(Icons.home_rounded),
+                    onPressed: () => {
+                      pageController.animateToPage(
+                        1,
+                        duration: duration,
+                        curve: Curves.easeInOut,
+                      ),
+                    },
+                  ),
+                ],
+              ),
+            ],
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

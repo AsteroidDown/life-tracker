@@ -20,48 +20,44 @@ class AreYouSurePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(children: [
-      Expanded(
-        child: Center(
-          child: Expanded(
-            child: Column(
+      Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'Reset?',
+              style: TextStyle(
+                fontSize: 48,
+                color: Colors.grey.shade300,
+                decoration: TextDecoration.none,
+              ),
+            ),
+            Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
-                  'Reset?',
-                  style: TextStyle(
-                    fontSize: 48,
-                    color: Colors.grey.shade300,
-                    decoration: TextDecoration.none,
-                  ),
+                IconButton(
+                  iconSize: size,
+                  color: Colors.grey.shade300,
+                  onPressed: () => {
+                    pageController.nextPage(
+                      duration: duration,
+                      curve: curve,
+                    ),
+                  },
+                  icon: Icon(Icons.close_rounded),
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    IconButton(
-                      iconSize: size,
-                      color: Colors.grey.shade300,
-                      onPressed: () => {
-                        pageController.nextPage(
-                          duration: duration,
-                          curve: curve,
-                        ),
-                      },
-                      icon: Icon(Icons.close_rounded),
-                    ),
-                    SizedBox(width: 16),
-                    IconButton(
-                      iconSize: size,
-                      color: Colors.grey.shade300,
-                      onPressed: () => {
-                        toggle(),
-                      },
-                      icon: Icon(Icons.done_rounded),
-                    ),
-                  ],
+                SizedBox(width: 16),
+                IconButton(
+                  iconSize: size,
+                  color: Colors.grey.shade300,
+                  onPressed: () => {
+                    toggle(),
+                  },
+                  icon: Icon(Icons.done_rounded),
                 ),
               ],
             ),
-          ),
+          ],
         ),
       ),
     ]);

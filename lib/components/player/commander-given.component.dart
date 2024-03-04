@@ -21,57 +21,54 @@ class CommanderGivenComponent extends StatelessWidget {
       color: player.colorDark,
       child: Stack(
         children: [
-          Expanded(
-            child: Row(
-              children: [
+          Row(
+            children: [
+              Expanded(
+                flex: 1,
+                child: LifeTotalComponent(
+                  player: player,
+                  commander: true,
+                  color: Colors.grey.shade300,
+                  onLifeLost: () => {
+                    trackerState.subtractCommander(player.number),
+                  },
+                  onLifeGain: () => {
+                    trackerState.addCommander(player.number),
+                  },
+                ),
+              ),
+              if (player.partners)
                 Expanded(
                   flex: 1,
-                  child: LifeTotalComponent(
-                    player: player,
-                    commander: true,
-                    color: Colors.grey.shade300,
-                    onLifeLost: () => {
-                      trackerState.subtractCommander(player.number),
-                    },
-                    onLifeGain: () => {
-                      trackerState.addCommander(player.number),
-                    },
-                  ),
-                ),
-                if (player.partners)
-                  Expanded(
-                    flex: 1,
-                    child: Transform.translate(
-                      offset: Offset(-1.0, 0),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          border: Border(
-                            left: BorderSide(
-                              width: 3,
-                              color: player.color!,
-                            ),
+                  child: Transform.translate(
+                    offset: Offset(-1.0, 0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        border: Border(
+                          left: BorderSide(
+                            width: 3,
+                            color: player.color!,
                           ),
                         ),
-                        child: Expanded(
-                          child: LifeTotalComponent(
-                            player: player,
-                            partner: true,
-                            commander: true,
-                            color: Colors.grey.shade300,
-                            onLifeLost: () => {
-                              trackerState.subtractCommander(
-                                  player.number, true),
-                            },
-                            onLifeGain: () => {
-                              trackerState.addCommander(player.number, true),
-                            },
-                          ),
+                      ),
+                      child: Expanded(
+                        child: LifeTotalComponent(
+                          player: player,
+                          partner: true,
+                          commander: true,
+                          color: Colors.grey.shade300,
+                          onLifeLost: () => {
+                            trackerState.subtractCommander(player.number, true),
+                          },
+                          onLifeGain: () => {
+                            trackerState.addCommander(player.number, true),
+                          },
                         ),
                       ),
                     ),
                   ),
-              ],
-            ),
+                ),
+            ],
           ),
           Center(
             child: Container(
@@ -108,7 +105,7 @@ class CommanderGivenComponent extends StatelessWidget {
                 ),
               ),
             ),
-          )
+          ),
         ],
       ),
     );

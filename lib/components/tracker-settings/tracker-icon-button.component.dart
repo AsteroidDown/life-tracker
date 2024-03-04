@@ -26,30 +26,28 @@ class TrackerIconButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return AnimatedContainer(
       duration: duration,
-      child: Expanded(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            IconButton(
-              icon: icon,
-              color: color,
-              iconSize: size,
-              onPressed: onPressed,
-              alignment: Alignment.topCenter,
-            ),
-            Container(
-              transform: Matrix4.translationValues(0, -8, 0),
-              child: Text(
-                label,
-                style: TextStyle(
-                  color: color,
-                  fontSize: 16,
-                  decoration: TextDecoration.none,
-                ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          IconButton(
+            icon: icon,
+            color: color,
+            iconSize: size,
+            onPressed: onPressed,
+            alignment: Alignment.topCenter,
+          ),
+          Container(
+            transform: Matrix4.translationValues(0, -8, 0),
+            child: Text(
+              label,
+              style: TextStyle(
+                color: color,
+                fontSize: 16,
+                decoration: TextDecoration.none,
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
