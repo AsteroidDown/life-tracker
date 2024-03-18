@@ -236,7 +236,7 @@ class _LifeTotalComponentState extends State<LifeTotalComponent> {
               ),
             ),
           ),
-        )
+        ),
       ],
     );
   }

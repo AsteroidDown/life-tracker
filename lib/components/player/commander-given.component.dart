@@ -51,19 +51,17 @@ class CommanderGivenComponent extends StatelessWidget {
                           ),
                         ),
                       ),
-                      child: Expanded(
-                        child: LifeTotalComponent(
-                          player: player,
-                          partner: true,
-                          commander: true,
-                          color: Colors.grey.shade300,
-                          onLifeLost: () => {
-                            trackerState.subtractCommander(player.number, true),
-                          },
-                          onLifeGain: () => {
-                            trackerState.addCommander(player.number, true),
-                          },
-                        ),
+                      child: LifeTotalComponent(
+                        player: player,
+                        partner: true,
+                        commander: true,
+                        color: Colors.grey.shade300,
+                        onLifeLost: () => {
+                          trackerState.subtractCommander(player.number, true),
+                        },
+                        onLifeGain: () => {
+                          trackerState.addCommander(player.number, true),
+                        },
                       ),
                     ),
                   ),
