@@ -29,25 +29,25 @@ class DefaultSettingsPage extends StatelessWidget {
   final PageController pageController;
   final VoidCallback toggle;
 
-  Future<String> get _localPath async {
-    final directory = await getApplicationDocumentsDirectory();
+  // Future<String> get _localPath async {
+  //   final directory = await getApplicationDocumentsDirectory();
 
-    return directory.path;
-  }
+  //   return directory.path;
+  // }
 
-  Future<File> get _localFile async {
-    final path = await _localPath;
-    return File('$path/game-data.txt');
-  }
+  // Future<File> get _localFile async {
+  //   final path = await _localPath;
+  //   return File('$path/game-data.txt');
+  // }
 
-  Future<File> writeGameData(GameData gameData) async {
-    final file = await _localFile;
+  // Future<File> writeGameData(GameData gameData) async {
+  //   final file = await _localFile;
 
-    String json = jsonEncode(gameData);
-    List<int> bytes = utf8.encode(json);
+  //   String json = jsonEncode(gameData);
+  //   List<int> bytes = utf8.encode(json);
 
-    return file.writeAsBytes(bytes);
-  }
+  //   return file.writeAsBytes(bytes);
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -69,7 +69,7 @@ class DefaultSettingsPage extends StatelessWidget {
     ];
     List<void Function()> actions = [
       () => {
-            writeGameData(trackerState.getGameData()),
+            // writeGameData(trackerState.getGameData()),
             Navigator.of(context).popUntil((route) => route.isFirst),
           },
       () => {
