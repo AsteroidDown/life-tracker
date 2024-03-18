@@ -8,6 +8,7 @@ import 'package:test_app/models/template.model.dart';
 import 'package:test_app/pages/template.page.dart';
 
 import '../models/game-data.model.dart';
+import 'info.page.dart';
 import 'tracker.page.dart';
 
 const double boxSize = 80;
@@ -182,6 +183,39 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
+            SizedBox(
+              height: 96,
+            ),
+            ButtonComponent(
+              shouldAnimate: false,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => InfoPage(),
+                  ),
+                );
+              },
+              child: Container(
+                padding: EdgeInsets.fromLTRB(16, 8, 16, 8),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(16),
+                  border: Border.all(
+                    width: 4,
+                    color: Colors.grey.shade900.withAlpha(80),
+                  ),
+                  color: Colors.grey.shade900.withAlpha(100),
+                ),
+                child: Text(
+                  'Info',
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.grey.shade300,
+                    decoration: TextDecoration.none,
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),

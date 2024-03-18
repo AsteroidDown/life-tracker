@@ -227,9 +227,9 @@ class _LifeTotalComponentState extends State<LifeTotalComponent> {
                       '${currentLife != prevLife ? (currentLife - prevLife).abs() : ""}',
                       style: TextStyle(
                         fontSize: 28,
-                        color: color ?? Colors.grey.shade900,
-                        decoration: TextDecoration.none,
                         fontWeight: FontWeight.bold,
+                        decoration: TextDecoration.none,
+                        color: color ?? Colors.grey.shade900,
                       ),
                     ),
                   ],

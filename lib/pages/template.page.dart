@@ -52,99 +52,105 @@ class _TemplatePageState extends State<TemplatePage> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Container(
-            margin: EdgeInsets.all(12),
-            padding: EdgeInsets.all(16),
-            decoration: BoxDecoration(
-              border: Border.all(
-                width: 4,
-                color: Colors.grey.shade900.withAlpha(120),
-              ),
-              borderRadius: BorderRadius.circular(16),
-              color: Colors.grey.shade900.withAlpha(140),
+          ConstrainedBox(
+            constraints: BoxConstraints(
+              maxWidth: 600,
             ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  alignment: Alignment.center,
-                  child: Text(
-                    'Game Details',
-                    style: TextStyle(
-                      color: Colors.grey.shade300,
-                      decoration: TextDecoration.none,
+            child: Container(
+              margin: EdgeInsets.all(12),
+              padding: EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                border: Border.all(
+                  width: 4,
+                  color: Colors.grey.shade900.withAlpha(120),
+                ),
+                borderRadius: BorderRadius.circular(16),
+                color: Colors.grey.shade900.withAlpha(140),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    alignment: Alignment.center,
+                    child: Text(
+                      'Game Details',
+                      style: TextStyle(
+                        color: Colors.grey.shade300,
+                        decoration: TextDecoration.none,
+                      ),
                     ),
                   ),
-                ),
-                SizedBox(height: 16),
-                TemplateDetails(
-                  template: template,
-                  onChanged: (updatedTemplate) => setTemplate(updatedTemplate),
-                ),
-                SizedBox(height: 24),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    ButtonComponent(
-                      shouldAnimate: false,
-                      onPressed: () {
-                        Navigator.pop(context);
-                      },
-                      child: Container(
-                        padding: EdgeInsets.fromLTRB(16, 6, 16, 6),
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            width: 2,
-                            color: Colors.grey.shade300,
+                  SizedBox(height: 16),
+                  TemplateDetails(
+                    template: template,
+                    onChanged: (updatedTemplate) =>
+                        setTemplate(updatedTemplate),
+                  ),
+                  SizedBox(height: 24),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      ButtonComponent(
+                        shouldAnimate: false,
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        child: Container(
+                          padding: EdgeInsets.fromLTRB(16, 6, 16, 6),
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                              width: 2,
+                              color: Colors.grey.shade300,
+                            ),
+                            borderRadius: BorderRadius.circular(18),
                           ),
-                          borderRadius: BorderRadius.circular(18),
-                        ),
-                        child: Text(
-                          'Back',
-                          style: TextStyle(
-                            fontSize: 32,
-                            color: Colors.grey.shade300,
-                            decoration: TextDecoration.none,
-                          ),
-                        ),
-                      ),
-                    ),
-                    SizedBox(width: 16),
-                    ButtonComponent(
-                      shouldAnimate: false,
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => TrackerPage(
-                              template: template!,
+                          child: Text(
+                            'Back',
+                            style: TextStyle(
+                              fontSize: 32,
+                              color: Colors.grey.shade300,
+                              decoration: TextDecoration.none,
                             ),
                           ),
-                        );
-                      },
-                      child: Container(
-                        padding: EdgeInsets.fromLTRB(16, 6, 16, 6),
-                        decoration: BoxDecoration(
-                          color: Colors.grey.shade300,
-                          border: Border.all(
-                            width: 2,
-                            color: Colors.grey.shade900,
-                          ),
-                          borderRadius: BorderRadius.circular(18),
                         ),
-                        child: Text(
-                          'Start',
-                          style: TextStyle(
-                            fontSize: 32,
-                            color: Colors.grey.shade900,
-                            decoration: TextDecoration.none,
+                      ),
+                      SizedBox(width: 16),
+                      ButtonComponent(
+                        shouldAnimate: false,
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => TrackerPage(
+                                template: template!,
+                              ),
+                            ),
+                          );
+                        },
+                        child: Container(
+                          padding: EdgeInsets.fromLTRB(16, 6, 16, 6),
+                          decoration: BoxDecoration(
+                            color: Colors.grey.shade300,
+                            border: Border.all(
+                              width: 2,
+                              color: Colors.grey.shade900,
+                            ),
+                            borderRadius: BorderRadius.circular(18),
+                          ),
+                          child: Text(
+                            'Start',
+                            style: TextStyle(
+                              fontSize: 32,
+                              color: Colors.grey.shade900,
+                              decoration: TextDecoration.none,
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                  ],
-                ),
-              ],
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         ],
