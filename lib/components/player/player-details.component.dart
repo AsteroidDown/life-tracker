@@ -3,7 +3,6 @@ import 'package:provider/provider.dart';
 
 import '../../models/player.model.dart';
 import '../../states/tracker.state.dart';
-import 'color-picker.component.dart';
 import 'player-counters.component.dart';
 
 class PlayerDetailsComponent extends StatefulWidget {
@@ -41,13 +40,7 @@ class _PlayerDetailsComponentState extends State<PlayerDetailsComponent> {
       ),
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            ColorPickerComponent(player: player),
-            PlayerCountersComponent(player: player),
-          ],
-        ),
+        child: PlayerCountersComponent(player: player),
       ),
     );
   }

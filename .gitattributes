@@ -13,7 +13,7 @@ docs/** linguist-vendored
 *.h linguist-detectable=false
 *.mk linguist-detectable=false
 *.js linguist-detectable=false
-*.js.map linguist-detectable=false
+*.js.* linguist-detectable=false
 *.c linguist-detectable=false
 *.cc linguist-detectable=false
 *.swift linguist-detectable=false

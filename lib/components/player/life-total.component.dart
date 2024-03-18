@@ -199,6 +199,7 @@ class _LifeTotalComponentState extends State<LifeTotalComponent> {
               ),
               child: Text(
                 '${commander ? commanderGiven : player.lifeTotal}',
+                style: TextStyle(fontFamily: 'concertOne'),
               ),
             ),
           ),

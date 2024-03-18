@@ -6,7 +6,10 @@ import '../../models/counter.model.dart';
 import '../../models/player.model.dart';
 import '../../states/tracker.state.dart';
 import 'add-counter.component.dart';
+import 'color-picker.component.dart';
 import 'counter.component.dart';
+
+const double maxHeight = 360;
 
 class PlayerCountersComponent extends StatefulWidget {
   const PlayerCountersComponent({
@@ -55,23 +58,44 @@ class _PlayerCountersComponentState extends State<PlayerCountersComponent> {
 
     return Row(
       children: [
-        Counters(
-          player: player,
-          counters: counters,
-          trackerState: trackerState,
-          addedCounterIndex: addedCounterIndex,
+        ConstrainedBox(
+          constraints: BoxConstraints(
+            maxHeight: maxHeight,
+          ),
+          child: ColorPickerComponent(player: player),
         ),
-        EditCountersButtons(
-          player: player,
-          counters: counters,
-          trackerState: trackerState,
+        ConstrainedBox(
+          constraints: BoxConstraints(
+            maxHeight: maxHeight,
+          ),
+          child: Counters(
+            player: player,
+            counters: counters,
+            trackerState: trackerState,
+            addedCounterIndex: addedCounterIndex,
+          ),
         ),
-        AddCounterComponent(
-          player: player,
-          counterAdded: (type) => {
-            addCounter(counters.length),
-            trackerState.addCounter(player.number, type),
-          },
+        ConstrainedBox(
+          constraints: BoxConstraints(
+            maxHeight: maxHeight,
+          ),
+          child: EditCountersButtons(
+            player: player,
+            counters: counters,
+            trackerState: trackerState,
+          ),
+        ),
+        ConstrainedBox(
+          constraints: BoxConstraints(
+            maxHeight: maxHeight,
+          ),
+          child: AddCounterComponent(
+            player: player,
+            counterAdded: (type) => {
+              addCounter(counters.length),
+              trackerState.addCounter(player.number, type),
+            },
+          ),
         ),
       ],
     );
