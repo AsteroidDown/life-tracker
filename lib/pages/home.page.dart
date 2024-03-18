@@ -23,38 +23,38 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-    // WidgetsBinding.instance.addPostFrameCallback((_) => readGameData());
+    WidgetsBinding.instance.addPostFrameCallback((_) => readGameData());
   }
 
   GameData? gameData;
 
-  // Future<String> get _localPath async {
-  //   final directory = await getApplicationDocumentsDirectory();
+  Future<String> get _localPath async {
+    final directory = await getApplicationDocumentsDirectory();
 
-  //   return directory.path;
-  // }
+    return directory.path;
+  }
 
-  // Future<File> get _localFile async {
-  //   final path = await _localPath;
-  //   return File('$path/game-data.txt');
-  // }
+  Future<File> get _localFile async {
+    final path = await _localPath;
+    return File('$path/game-data.txt');
+  }
 
-  // Future<GameData?> readGameData() async {
-  //   try {
-  //     final file = await _localFile;
+  Future<GameData?> readGameData() async {
+    try {
+      final file = await _localFile;
 
-  //     final data = await file.readAsBytes();
+      final data = await file.readAsBytes();
 
-  //     final jsonData = utf8.decode(data);
+      final jsonData = utf8.decode(data);
 
-  //     var decoded = json.decode(jsonData);
+      var decoded = json.decode(jsonData);
 
-  //     return GameData.fromJson(decoded);
-  //   } catch (e) {
-  //     print(e);
-  //     return null;
-  //   }
-  // }
+      return GameData.fromJson(decoded);
+    } catch (e) {
+      print(e);
+      return null;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -89,7 +89,6 @@ class _HomePageState extends State<HomePage> {
                     builder: (context) => TemplatePage(),
                   ),
                 );
-                // Navigator.pushNamed(context, '/template');
               },
               child: Container(
                 padding: EdgeInsets.fromLTRB(16, 8, 16, 8),
