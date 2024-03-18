@@ -22,14 +22,14 @@ class FourPlayers extends StatelessWidget {
     return Stack(
       children: [
         FourPlayersLayoutOne(),
-        // IgnorePointer(
-        //   ignoring: !trackerState.alternateLayout,
-        //   child: AnimatedOpacity(
-        //     duration: layoutDuration,
-        //     opacity: trackerState.alternateLayout ? 1 : 0,
-        //     child: FourPlayersLayoutTwo(),
-        //   ),
-        // ),
+        IgnorePointer(
+          ignoring: !trackerState.alternateLayout,
+          child: AnimatedOpacity(
+            duration: layoutDuration,
+            opacity: trackerState.alternateLayout ? 1 : 0,
+            child: FourPlayersLayoutTwo(),
+          ),
+        ),
       ],
     );
   }
