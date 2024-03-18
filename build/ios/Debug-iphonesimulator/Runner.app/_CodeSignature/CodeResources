@@ -18,7 +18,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		gC4JVAUoUYlZZO5IVjf10TECriI=
+		nUjZMazen0qAgDl4SLkzrRyN0Wc=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
-		DcsRutMHAi1HDWnwCoKW7Hkf4ak=
+		rATaw81khPbQSk9Q3Cy0dceWhVo=
 		</data>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
-		6shgAIlCafnwK+YVQE306G0XTbA=
+		INZbvEkFI2pVlGpVRpoQ6h+ekkU=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.bin</key>
 		<data>
@@ -150,7 +150,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/kernel_blob.bin</key>
 		<data>
-		OWx5gGYjRY2qBTO0Y4bxX6FpC0I=
+		ekv0r9/kac5FsxgHyVANOpu7tQ0=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/packages/font_awesome_flutter/lib/fonts/fa-brands-400.ttf</key>
 		<data>
@@ -262,19 +262,19 @@
 		</data>
 		<key>Frameworks/path_provider_foundation.framework/Info.plist</key>
 		<data>
-		x90ZFasC81wK0jOOP40DgXxzRZI=
+		YgzFP8bTkH380FZBPB3GqqFjqSU=
 		</data>
 		<key>Frameworks/path_provider_foundation.framework/_CodeSignature/CodeResources</key>
 		<data>
-		zJCRVNX9gC9GwUYcnFkIfr+gaK4=
+		p7TXiegI7kG+Zyvlpk90omxifc0=
 		</data>
 		<key>Frameworks/path_provider_foundation.framework/path_provider_foundation</key>
 		<data>
-		6+i+LJBv8pjsxxnLSWYVzTusZ2U=
+		uI9TEPluNGSIozo5NEORxXWtcjg=
 		</data>
 		<key>Frameworks/path_provider_foundation.framework/path_provider_foundation_privacy.bundle/Info.plist</key>
 		<data>
-		pl5uILj0fSM5JFrZJZ7B5YNiOds=
+		dNL3XMbJhjZmJR3Yq2UsW6avfTE=
 		</data>
 		<key>Frameworks/path_provider_foundation.framework/path_provider_foundation_privacy.bundle/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -282,7 +282,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		A5j/xGarpjT3/DfKIsSWRPmDdDI=
+		2MYJ0yNZOijFDZRxWc7hZgXFvRw=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -316,7 +316,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jKrm1prJe1kX8xiEVg9yO06J92C1ocGCXZybv3hIRWs=
+			8sVTeuD8H/8b/wCHL/7BYuWdJPyT2Ps7gQX/oBLG+Eg=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
@@ -365,7 +365,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			S9ud0QeA0GH2j7TFxtKBgKE6byXelFZ/4DgzLDT/KCY=
+			ntQ5OeAoP/a5+moUEidVZW9Ev3duspnoiiCm3vaBUns=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/Info.plist</key>
@@ -379,7 +379,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9sjyG0TFHop2bS0PN3ZmwxO8jVsFWpxRdOebSv1aYQc=
+			BoULiy5nw1KLzjXL8y6dIeyE+JuxMSg9wGs3HvnI9Ak=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.bin</key>
@@ -547,7 +547,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			w9st9wsjvbV6fCTdPlfPzwEuZZEfJqSMGkZu+sMdghc=
+			0BS7ZJdvpo48OyVEPJbf8opDtDCBG1JLLnsMBzBe3jE=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/packages/font_awesome_flutter/lib/fonts/fa-brands-400.ttf</key>
@@ -743,28 +743,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			WkJNFRJmOiF7gqE6BeHnI+8Er2Q5SmYt9ApZ8QHqFec=
+			PiTf04xLzJ2if0jePGxiwt/RE3xHmUNfJu9uTd2cMfY=
 			</data>
 		</dict>
 		<key>Frameworks/path_provider_foundation.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			qtkJUStzBEcniHFJqA0CCZo8jsG5hDX1yKGkbK8sFXs=
+			plpehHEfQ51FaD0Cq76DYAWbXMiEaUGzPClE1Vn928o=
 			</data>
 		</dict>
 		<key>Frameworks/path_provider_foundation.framework/path_provider_foundation</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			rxmtNeMHp4aZbTezaNXPCZ3WhvI9AmHgDynp3JSL5ww=
+			VZbRIbBD7qVpUQ6DkCoZunKBf2fnz7PTtYfZq4NnGhQ=
 			</data>
 		</dict>
 		<key>Frameworks/path_provider_foundation.framework/path_provider_foundation_privacy.bundle/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nvNtlaU+bTBv3WAAD3+vWM0x+9//sCT8ECb03rDHPeU=
+			wtKIpN4WC0UCGgeA1z3mP48VIPh1ipRub3McHZO3XvE=
 			</data>
 		</dict>
 		<key>Frameworks/path_provider_foundation.framework/path_provider_foundation_privacy.bundle/PrivacyInfo.xcprivacy</key>

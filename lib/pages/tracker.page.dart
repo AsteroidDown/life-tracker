@@ -73,7 +73,7 @@ class _TrackerPageState extends State<TrackerPage> {
               child: Stack(
                 children: [
                   FourPlayers(template: template),
-                  // TrackerSettings(),
+                  TrackerSettings(),
                 ],
               ),
             ),
