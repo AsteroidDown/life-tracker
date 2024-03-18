@@ -134,7 +134,7 @@ class EditCountersButtons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(8),
+      margin: EdgeInsets.fromLTRB(8, 8, 16, 8),
       child: SizedBox(
         width: 60,
         height: 1000,
@@ -142,19 +142,20 @@ class EditCountersButtons extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            IconButton(
-              icon: Icon(
-                size: 32,
-                player.editingCounters
-                    ? Icons.close_rounded
-                    : Icons.edit_rounded,
+            if (player.counters.isNotEmpty)
+              IconButton(
+                icon: Icon(
+                  size: 32,
+                  player.editingCounters
+                      ? Icons.close_rounded
+                      : Icons.edit_rounded,
+                ),
+                color: Colors.grey.shade50,
+                onPressed: () => {
+                  trackerState.toggleEditCounters(player.number),
+                },
               ),
-              color: Colors.grey.shade50,
-              onPressed: () => {
-                trackerState.toggleEditCounters(player.number),
-              },
-            ),
-            SizedBox(height: 12),
+            if (player.counters.isNotEmpty) SizedBox(height: 12),
             if (trackerState.monarch == -1)
               IconButton(
                 icon: Icon(

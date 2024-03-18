@@ -15,7 +15,7 @@ class Player {
   bool editingCounters = false;
 
   List<Counter> counters = [
-    Counter('Tax', 0),
+    // Counter('Tax', 0),
   ];
   List<List<int>> commanderTaken = [];
 

@@ -311,7 +311,7 @@ class TrackerState extends ChangeNotifier {
     List<Counter> activeCounters = [];
 
     for (Counter counter in players[playerNumber].counters) {
-      if (counter.count > 0) activeCounters.add(counter);
+      activeCounters.add(counter);
     }
 
     return activeCounters;

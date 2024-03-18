@@ -145,7 +145,7 @@ class _CounterComponentState extends State<CounterComponent> {
                     ),
                   ],
                 ),
-              )
+              ),
             ],
           ),
         ),

@@ -22,6 +22,7 @@ class AddCounterComponent extends StatelessWidget {
     var trackerState = context.watch<TrackerState>();
 
     List<String> topRowCounters = [
+      'Tax',
       'Poison',
       'Storm',
       'Energy',
@@ -42,7 +43,7 @@ class AddCounterComponent extends StatelessWidget {
         maxWidth: 400,
         maxHeight: 1000,
       ),
-      padding: EdgeInsets.all(12),
+      padding: EdgeInsets.fromLTRB(16, 12, 12, 12),
       decoration: BoxDecoration(
         border: Border(
           left: BorderSide(
@@ -106,10 +107,8 @@ class CounterIconButton extends StatelessWidget {
         onPressed: () => {
           counterAdded(type),
         },
-        child: Expanded(
-          child: Image(
-            image: AssetImage('assets/$type.png'),
-          ),
+        child: Image(
+          image: AssetImage('assets/$type.png'),
         ),
       ),
     );
