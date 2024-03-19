@@ -160,7 +160,7 @@ class TrackerState extends ChangeNotifier {
       updatePlayer(
         player.number,
         PlayerProperties(
-          counters: [Counter('Tax')],
+          counters: [],
           commanderTaken: commanderTaken,
           lifeTotal: template!.startingLife,
         ),

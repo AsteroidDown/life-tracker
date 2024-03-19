@@ -1,6 +1,6 @@
 {
-  "app_name": "life_tracker",
+  "app_name": "test_app",
   "version": "0.0.1",
   "build_number": "1",
-  "package_name": "life_tracker"
+  "package_name": "test_app"
 }
